@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5 {
 
 /* Hero Section */
 .hero-header {
-  height: 50vh;
+  height: 80vh;
   background: url("images/images-12.png") center/cover no-repeat; /* updated image */
   display: flex;
   align-items: center;
