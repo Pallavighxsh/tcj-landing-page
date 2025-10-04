@@ -76,6 +76,7 @@ h1, h2, h3, h4, h5 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .hero-content-box {
