@@ -70,13 +70,12 @@ h1, h2, h3, h4, h5 {
 
 /* Hero Section */
 .hero-header {
-  height: 80vh;
+  height: 65vh;
   background: url("images/images-12.png") center/cover no-repeat; /* updated image */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 30px;
 }
 
 .hero-content-box {
@@ -178,6 +177,7 @@ h1, h2, h3, h4, h5 {
   color: #0F4D92;
   margin-bottom: 1em;
   font-weight: bold;
+  margin-top: 20px;
 }
 
 .about-intro {
