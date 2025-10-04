@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Continuum | PHI Learning</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>The Continuum | Submit</title>
+  <link rel="stylesheet" href="styles2.css" />
   <link href="https://fonts.googleapis.com/css2?family=Charlevoix+Pro:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
@@ -17,15 +15,22 @@
   <div class="nav-container">
     <div class="nav-logo">
       <img src="images/PHI_White.png" alt="PHI Logo" />
-      <img src="images/continuum logo white.png" alt="Continuum Logo" />
-    </div>
-    <div class="nav-title">
-      <h1>The Continuum By PHI Learning</h1>
+      <img src="images/continuum-logo-white.png" alt="Continuum Logo" />
     </div>
     <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#timeline">Contribute</a>
-      <a href="#reviewer">Peer Reviewing</a>
+      <a href="#about" class="nav-about">About Us</a>
+      <a href="#timeline" class="nav-timeline">6 Steps to Publish</a>
+      <a href="#reviewer" class="nav-reviewers">Our Reviewers</a>
+      <a href="#cta" class="nav-submit">Contribute</a>
+
+      <div class="nav-dropdown">
+        <a href="#all-issues" class="nav-issues">All Issues ▾</a>
+        <div class="dropdown-content">
+          <a href="#all-issues">All Issues</a>
+          <a href="#preview">Preview</a>
+          <a href="#full-access">Full Access</a>
+        </div>
+      </div>
     </nav>
   </div>
 </header>
@@ -34,45 +39,61 @@
 <section class="hero-header">
   <div class="hero-content-box">
     <div class="hero-content">
-  <img src="images/continuum logo white.png" alt="Continuum Logo" class="hero-logo" />
-  <h2><strong>Welcome</strong> to PHI Learning's Academic Journal!</h2>
-  <p>Read on to learn more about the publication process and how to contribute!</p>
-</div>
+      <img src="images/continuum-logo-white.png" alt="Continuum Logo" class="hero-logo" />
+      <h2><strong>Welcome</strong> to PHI Learning's Academic Journal!</h2>
+      <p>Read on to learn more about the publication process and how to contribute!</p>
+
+      <!-- Download Buttons Inside Hero Box -->
+      <div class="download-header">
+        <a class="download-btn" href="download docs/Journal Article Information Report- Submission Form.docx" download>
+          Download Submission Form
+        </a>
+        <a class="download-btn" href="download docs/Guidelines to write an article-2.docx" download>
+          Download Article Guidelines
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- About Section (2-column) -->
 <section class="about-section" id="about">
   <div class="about-wrapper">
+
+    <!-- Left Column -->
     <div class="about-content">
       <h2 class="about-heading">Get published by a publisher with over 62 years of academic credibility!</h2>
       <p class="about-intro">
-        PHI Learning's academic journal, <strong>The Continuum</strong>, is a new educational resource which aims to uplift Indian and Global research. The interdisciplinary journal feautures both science and humanities subjects. At it's nascent stage, we expect the launch of issue #1 soon!
+        PHI Learning's academic journal, <strong>The Continuum</strong>, is a new educational resource which aims to uplift Indian and Global research. The interdisciplinary journal features both science and humanities subjects. At its nascent stage, we expect the launch of issue #1 soon!
       </p><br>
 
       <h3 class="about-subheading">Our Standard Operating Procedure</h3>
       <ul class="about-benefits">
-        <li>When you enquire, we will send you a form called the "Mansucript Information Report", to be filled out by you.</li>
-        <li>The Journal processing teams include the Editorial Board, Subject Experts and Reviewers.</li>
+        <li>When you enquire, we will send you a form called the "Manuscript Information Report", to be filled out by you.</li>
+        <li>The Journal processing teams include the Editorial Board, Subject Experts, and Reviewers.</li>
         <li>Manuscript must be submitted in LaTeX or Word Format following the Journal’s style guide.</li>
         <li>All manuscripts undergo double-blind peer review to ensure unbiased evaluation.</li>
         <li>You will benefit from end-to-end editorial and production support throughout the publication process.</li>
-        </ul>
+      </ul>
+    </div> 
 
-      <p class="about-closing">
-        <strong>Authors must submit manuscripts via email. Click the button below to email us!</strong>
-      </p>
-
-      <a id="cta" href="mailto:pallavighosh@phindia.com?subject=Regarding%20'The%20Continuum'%20Academic%20Journal" class="btn">
-        Click Here To Email Us!
-      </a>
-    </div>
-
+    <!-- Right Column -->
     <div class="about-image">
       <img src="images/journals.jpeg" alt="Journals" />
     </div>
-  </div>
+
+  </div><br>
+  <section class="about-closing">
+    <p>
+        <strong>Authors must submit manuscripts via email. Click the button below to email us!</strong>
+      </p>
+      <a id="cta" href="mailto:pallavighosh@phindia.com?subject=Regarding%20'The%20Continuum'%20Academic%20Journal&body=Dear%20Pallavi%20Ghosh,%0D%0A%0D%0AI%20am%20interested%20in%20contributing%20a%20journal%20article%20to%20The%20Continuum.%20Please%20share%20the%20next%20steps.%0D%0A%0D%0ABest%20regards,"
+         class="btn">
+        Click Here To Email Us!
+      </a>
+    </div><br>
+</section><br>
 </section>
+
 
 
 <!-- Timeline Section -->
@@ -115,18 +136,14 @@
       <p>Your research is published online and in print, indexed for academic accessibility, and promoted through PHI Learning’s networks.</p>
     </div>
   </div>
-
-  <div class="timeline-contact">
-    <strong>Email & Enquire:</strong> <a href="mailto:pallavighosh@phindia.com">pallavighosh@phindia.com</a>
-  </div>
 </section>
 
 <!-- Peer Reviewer Section -->
 <section id="reviewer" class="reviewer">
   <div class="reviewer-image"></div>
   <div class="reviewer-content">
-  <h2 class="reviewer-title">Join Us As a Peer Reviewer!</h2>
-  <h3 class="reviewer-subtitle">Benefits of peer reviewing...</h3>
+    <h2 class="reviewer-title">Join Us As a Peer Reviewer!</h2>
+    <h3 class="reviewer-subtitle">Benefits of peer reviewing...</h3>
     <ul>
       <li><strong>Recognition:</strong> Your name and biodata featured prominently in the journal.</li><br>
       <li><strong>Credibility:</strong> You’ll be associated with a respected academic brand, PHI Learning.</li>
@@ -163,7 +180,6 @@
     </ul>
   </div>
 </footer>
-
 
 </body>
 </html>
