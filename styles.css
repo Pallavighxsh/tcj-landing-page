@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth; /* Added smooth scrolling */
+}
+
 body {
   font-family: 'Charlevoix Pro', 'Poppins', Tahoma, sans-serif;
   line-height: 1.6;
@@ -24,7 +28,7 @@ h1, h2, h3, h4, h5 {
   position: sticky;
   top: 0;
   background-color: #0F4D92; /* Yale Blue */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Drop shadow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   padding: 10px 20px;
 }
@@ -48,20 +52,6 @@ h1, h2, h3, h4, h5 {
   object-fit: contain;
 }
 
-.nav-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  color: white;
-}
-
-.nav-title h1 {
-  color: #fff;
-  margin: 0;
-  font-size: 1.6rem;
-}
-
 .nav-links {
   display: flex;
   gap: 20px;
@@ -75,16 +65,17 @@ h1, h2, h3, h4, h5 {
 }
 
 .nav-links a:hover {
-  color: #ffff33; /* Neon yellow */
+  color: #ffff33;
 }
 
 /* Hero Section */
 .hero-header {
   height: 50vh;
-  background: url("images/images-31.png") center/cover no-repeat;
+  background: url("images/images-12.png") center/cover no-repeat; /* updated image */
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .hero-content-box {
@@ -96,137 +87,25 @@ h1, h2, h3, h4, h5 {
   text-align: center;
 }
 
-.hero-content h2 {
-  font-size: 1.6em;
-  margin-bottom: 0.5em;
-}
-
-.hero-content p {
-  font-size: 0.9em;
-  color: #cceeff;
-}
-
 .hero-logo {
   max-width: 200px;
-  margin-bottom: 0px;
+  margin-bottom: 1em;
   display: block;
   margin-left: auto;
   margin-right: auto;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 
-/* About Section */
-.about-section {
-  padding: 6em 3em;
-  background-color: #f7f9fc;
-  color: #333;
-  font-family: 'Helvetica Neue', sans-serif;
-}
-
-.about-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.7em;
-  max-width: 1200px;
-  margin: 0 auto;
-  align-items: flex-start;
-}
-
-.about-content {
-  flex: 1 1 55%;
-  max-width: 900px;
-  line-height: 1.5;
-  font-size: 1rem;
-}
-
-.about-heading {
-  font-family: 'Georgia', serif;
-  font-size: 1.5rem;
-  color: #0F4D92;
-  margin-bottom: 1em;
-  font-weight: bold;
-}
-
-.about-intro {
-  font-size: 1.25rem;
-  font-weight: 500;
-}
-
-.about-subheading {
-  font-family: 'Georgia', serif;
-  font-size: 1.25rem;
-  color: #444;
-  margin-top: 5px;
-  margin-bottom: 1em;
-}
-
-.about-benefits {
-  list-style-type: disc;
-  padding-left: 1.5em;
-  margin-bottom: 2em;
-}
-
-.about-benefits li {
-  margin-bottom: 5px;
-  font-size: 1.25rem;
-}
-
-.about-closing {
-  font-size: 1.2rem;
-  font-style: italic;
-  margin-top: 1em;
-}
-
-.about-image {
-  flex: 1 1 40%;
-  min-width: 200px;          /* shrink more gracefully on small screens */
-  max-width: 600px;          /* prevent it from stretching too wide */
-  width: 100%;
-}
-
-.about-image img {
-  width: 100%;
-  height: auto;              /* keeps aspect ratio */
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;            /* removes extra bottom spacing */
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .about-image {
-    flex: 1 1 100%;          /* stack full width */
-    min-width: unset;
-    max-width: 100%;
-  }
-}
-
-
-/* Button */
-.btn {
-  background-color: #0000a0;
-  color: #fff;
-  padding: 1.2em 2.5em;
-  font-size: 1.2rem;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 1.2em;
-}
-
-.btn:hover {
-  background-color: #000080;
-}
-
 /* Timeline Section */
 .timeline-wrapper {
-  background: url("images/images-31.png") center/cover no-repeat;
+  background: url("images/images-12.png") center/cover no-repeat; /* updated image */
   background-color: rgba(255, 255, 255, 0.3);
   background-blend-mode: lighten;
   padding: 4em 2em;
   text-align: center;
 }
 
+/* Timeline Section */
 .timeline-wrapper h2 {
   margin-bottom: 2em;
   color: #0000a0;
@@ -268,11 +147,100 @@ h1, h2, h3, h4, h5 {
   color: #fff;
   padding: 1em;
   border-radius: 5px;
+  display: inline-block;
 }
 
 .timeline-contact a {
   color: #fff;
   text-decoration: underline;
+}
+
+/* About Section */
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.7em;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.about-content {
+  flex: 1 1 55%;
+  max-width: 900px;
+  line-height: 1.5;
+}
+
+.about-heading {
+  font-family: 'Georgia', serif;
+  font-size: 1.9rem;
+  color: #0F4D92;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+.about-intro {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.about-subheading {
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  color: #444;
+  margin-top: 5px;
+  margin-bottom: 1em;
+}
+
+.about-benefits {
+  list-style-type: disc;
+  padding-left: 1.3em;
+}
+
+.about-benefits li {
+  margin-bottom: 5px;
+  font-size: 1.15rem;
+}
+
+.about-closing {
+  font-size: 1.2rem;
+  font-style: italic;
+  background-color: rgba(0, 64, 128, 0.7); 
+  color: white;
+  padding: 2em;
+  border-radius: 12px;
+  width: fit-content;
+  margin: 0.5em auto 0 auto;
+  text-align: center;
+}
+
+.about-closing .btn {
+  margin-top: 1em;
+  background-color: white;
+  color: #004080;
+  font-weight: bold;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.about-closing .btn:hover {
+  background-color: #ff69b4;
+  color: #fff;
+  border-color: #ff69b4;
+}
+
+.about-image {
+  flex: 1 1 40%;
+  min-width: 280px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  padding: 0;
 }
 
 /* Reviewer Section */
@@ -334,6 +302,23 @@ h1, h2, h3, h4, h5 {
   font-size: 1rem;
 }
 
+/* Buttons */
+.btn {
+  background-color: #0000a0;
+  color: #fff;
+  padding: 1.2em 2.5em;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1.2em;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #ff69b4;
+}
+
 /* Footer */
 .footer {
   background-color: #000;
@@ -381,10 +366,6 @@ h1, h2, h3, h4, h5 {
 }
 
 @media (max-width: 992px) {
-  .nav-title h1 {
-    font-size: 1.2rem;
-  }
-
   .hero-content h2 {
     font-size: 1.3em;
   }
@@ -412,24 +393,6 @@ h1, h2, h3, h4, h5 {
 }
 
 @media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-title {
-    position: static;
-    transform: none;
-    text-align: left;
-    margin-top: 0.5em;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 0.5em;
-  }
-
   .hero-header {
     height: 40vh;
   }
@@ -503,15 +466,5 @@ h1, h2, h3, h4, h5 {
 
   .reviewer-list li {
     font-size: 0.9rem;
-  }
-
-  .footer {
-    padding: 1.5em;
-    font-size: 0.9rem;
-  }
-
-  .footer .socials a,
-  .footer .social-icons a {
-    font-size: 1em;
   }
 }
